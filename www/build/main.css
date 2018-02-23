@@ -25677,3 +25677,28 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+.main-content {
+  height: 100%;
+}
+
+page-about .scroll-content {
+  background-color: blue;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(aqua));
+  background-image: linear-gradient(blue, aqua);
+  color: white;
+}
+
+page-contact .scroll-content {
+  background-color: green;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(green), to(yellow));
+  background-image: linear-gradient(green, yellow);
+  color: white;
+}
+
+page-home .scroll-content {
+  background-color: red;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(red), to(orange));
+  background-image: linear-gradient(red, orange);
+  color: white;
+}
