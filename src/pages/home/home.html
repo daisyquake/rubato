@@ -7,7 +7,7 @@
 <ion-content>
   <div class="main-content" (swipe)="swipe($event)">
     <ion-card *ngIf="!interests">
-      <ion-card-header>No Available Interests</ion-card-header>
+      <ion-card-header class="my-interests-header">No Available Interests</ion-card-header>
       <ion-card-content>
         <p>
           You are currently not having any interests.
@@ -22,7 +22,7 @@
     </ion-card>
     <ion-card *ngIf="interests">
         <ion-list>
-          <ion-list-header>My Interests</ion-list-header>
+          <ion-list-header class="my-interests-header">My Interests</ion-list-header>
           <button ion-item *ngFor="let item of interests" (click)="interestTapped($event, item)">
             <ion-icon name="flash" padding></ion-icon>
             {{item.Name}}

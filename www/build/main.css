@@ -25702,3 +25702,8 @@ page-home .scroll-content {
   background-image: linear-gradient(white, orange);
   color: black;
 }
+
+.my-interests-header {
+  font-weight: bold;
+  font-size: large;
+}
