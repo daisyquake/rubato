@@ -210,7 +210,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.interests = [
+            {
+                Id: 1,
+                Name: "Tennis",
+                People: []
+            },
+            {
+                Id: 2,
+                Name: "Football",
+                People: []
+            },
+            {
+                Id: 3,
+                Name: "Basketball",
+                People: []
+            }
+        ];
     }
+    HomePage.prototype.interestTapped = function (event, item) {
+    };
     HomePage.prototype.swipe = function (event) {
         if (event.direction === 2) {
             this.navCtrl.parent.select(1);
@@ -218,11 +237,12 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>My Interests</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="main-content" (swipe)="swipe($event)">\n    <ion-card>\n      <ion-card-header>No Available Interests</ion-card-header>\n      <ion-card-content>\n        <p>\n          You are currently not having any interests.\n        </p>\n        <p>\n          First add an interest then you will be able to see available people to connect.\n        </p>\n        <button ion-button full round (click)="findInterest()">\n            <ion-icon name="add-circle" padding></ion-icon> Add an Interest\n          </button>\n      </ion-card-content>\n    </ion-card>\n\n  </div>\n</ion-content>'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Available Interests</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="main-content" (swipe)="swipe($event)">\n    <ion-card *ngIf="!interests">\n      <ion-card-header>No Available Interests</ion-card-header>\n      <ion-card-content>\n        <p>\n          You are currently not having any interests.\n        </p>\n        <p>\n          First add an interest then you will be able to see available people to connect.\n        </p>\n        <button ion-button full round (click)="findInterest()">\n            <ion-icon name="add-circle" padding></ion-icon> Add an Interest\n          </button>\n      </ion-card-content>\n    </ion-card>\n    <ion-card *ngIf="interests">\n        <ion-list>\n          <ion-list-header>My Interests</ion-list-header>\n          <button ion-item *ngFor="let item of interests" (click)="interestTapped($event, item)">\n            <ion-icon name="flash" padding></ion-icon>\n            {{item.Name}}\n          </button>\n        </ion-list>\n        <ion-card-content>\n          <button ion-button full round (click)="findInterest()">\n              <ion-icon name="add-circle" padding></ion-icon> Add an Interest\n            </button>\n        </ion-card-content>\n      </ion-card>\n  </div>\n</ion-content>'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
     ], HomePage);
     return HomePage;
+    var _a;
 }());
 
 //# sourceMappingURL=home.js.map
