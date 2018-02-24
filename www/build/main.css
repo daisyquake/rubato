@@ -25697,8 +25697,8 @@ page-contact .scroll-content {
 }
 
 page-home .scroll-content {
-  background-color: red;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(red), to(orange));
-  background-image: linear-gradient(red, orange);
-  color: white;
+  background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(orange));
+  background-image: linear-gradient(white, orange);
+  color: black;
 }

@@ -1,19 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>My Interests</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <div class="main-content" (swipe)="swipe($event)">
-    <h2>Welcome to Ionic!</h2>
-    <p>
-      This starter project comes with simple tabs-based layout for apps
-      that are going to primarily use a Tabbed UI.
-    </p>
-    <p>
-      Take a look at the <code>src/pages/</code> directory to add or change tabs,
-      update any existing page or create new pages.
-    </p>
+    <ion-card>
+      <ion-card-header>No Available Interests</ion-card-header>
+      <ion-card-content>
+        <p>
+          You are currently not having any interests.
+        </p>
+        <p>
+          First add an interest then you will be able to see available people to connect.
+        </p>
+        <button ion-button full round (click)="findInterest()">
+            <ion-icon name="add-circle" padding></ion-icon> Add an Interest
+          </button>
+      </ion-card-content>
+    </ion-card>
+
   </div>
 </ion-content>
