@@ -25708,11 +25708,16 @@ page-home .scroll-content {
   font-size: large;
 }
 
-page-user-item .item-profile {
+.item-profile {
   height: 150px;
 }
 
-page-user-item .item-profile .item-avatar > img:first-child {
+.item-profile .item-avatar > img:first-child {
   max-width: 100px;
   max-height: 100px;
+}
+
+.user-detail {
+  max-width: 140px;
+  border-radius: 50%;
 }

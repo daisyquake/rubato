@@ -504,7 +504,7 @@ var UserItemPage = (function () {
     ], UserItemPage.prototype, "userData", void 0);
     UserItemPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-user-item',template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/user-item/user-item.html"*/'<button ion-item class="item-profile" *ngIf="userData">\n    <div class="item-avatar">\n      <img [src]="userData?.ImageUrl">\n    </div>\n  </button>\n'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/user-item/user-item.html"*/,
+            selector: 'page-user-item',template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/user-item/user-item.html"*/'<button ion-item class="item-profile" *ngIf="userData">\n    <div class="item-avatar">\n      <img [src]="userData?.ImageUrl" class="user-detail">\n    </div>\n  </button>\n'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/user-item/user-item.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], UserItemPage);

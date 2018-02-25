@@ -1,9 +1,16 @@
 page-user-item {
-    .item-profile {
-        height: 150px;
-        .item-avatar > img:first-child {
-          max-width: 100px;
-          max-height: 100px;
-        }
-      }
+    
+      
+}
+.item-profile {
+  height: 150px;
+  .item-avatar > img:first-child {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+.user-detail {
+  max-width: 140px;
+  border-radius: 50%;
 }
