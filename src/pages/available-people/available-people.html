@@ -8,5 +8,12 @@
 
 
 <ion-content padding>
-
+  <ion-grid>
+      <ion-row *ngFor="let row of grid">
+          <ion-col width-50 *ngFor="let user of row">
+            <page-user-item [userData]="user"></page-user-item>
+          </ion-col>
+        </ion-row>
+  </ion-grid> 
+      
 </ion-content>
