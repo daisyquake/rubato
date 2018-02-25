@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
+@IonicPage(
+  {
+    name: 'home-page'
+  }
+  )
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -24,12 +30,12 @@ export class HomePage {
       People: []
     }
   ];
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
   interestTapped(event, item){
-
+      this.navCtrl.push('available-people-page', item);
   }
   swipe(event) {
     if(event.direction === 2) {

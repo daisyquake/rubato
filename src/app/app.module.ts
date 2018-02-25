@@ -6,6 +6,7 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { AvailablePeoplePageModule } from '../pages/available-people/available-people.module';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    AvailablePeoplePageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
