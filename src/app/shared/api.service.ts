@@ -6,17 +6,20 @@ export class ApiService {
  myInterests: Array<any> =  [
     { 
       Id: 1,
-      Name: "Tennis",
+      Name: 'Tennis',
+      Icon: 'tennisball',
       People: []
     },
     { 
       Id: 2,
       Name: "Football",
+      Icon: "football",
       People: []
     },
     { 
       Id: 3,
       Name: "Basketball",
+      Icon: "basketball",
       People: []
     }
   ];
@@ -24,31 +27,37 @@ export class ApiService {
     { 
       Id: 1,
       Name: "Tennis",
+      Icon: "tennisball",
       People: []
     },
     { 
       Id: 2,
       Name: "Football",
+      Icon: "football",
       People: []
     },
     { 
       Id: 3,
       Name: "Basketball",
+      Icon: "basketball",
       People: []
     },
     { 
       Id: 4,
       Name: "Chess",
+      Icon: "chess",
       People: []
     },
     { 
       Id: 5,
       Name: "Table tennis",
+      Icon: "tennisball",
       People: []
     },
     { 
       Id: 6,
       Name: "Bicycling",
+      Icon: "bicycle",
       People: []
     }
   ];
