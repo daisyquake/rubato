@@ -25698,8 +25698,8 @@ page-contact .scroll-content {
 
 page-home .scroll-content {
   background-color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(orange));
-  background-image: linear-gradient(white, orange);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#c2d1f0));
+  background-image: linear-gradient(white, #c2d1f0);
   color: black;
 }
 

@@ -23,7 +23,7 @@
     <ion-card *ngIf="myInterests">
         <ion-list>
           <ion-list-header class="my-interests-header">My Interests</ion-list-header>
-          <button ion-item *ngFor="let item of myInterests" (click)="myInterestTapped($event, item)">
+          <button *ngFor="let item of myInterests;  let i=index" [style.backgroundColor]="i%2 != 0 ? '#eff5f5' : '#d0e1e1'" ion-item (click)="myInterestTapped($event, item)">
             <ion-icon [name]="item.Icon" padding></ion-icon>
             {{item.Name}}
           </button>

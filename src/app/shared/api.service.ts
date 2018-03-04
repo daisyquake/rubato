@@ -45,7 +45,7 @@ export class ApiService {
     { 
       Id: 4,
       Name: "Chess",
-      Icon: "chess",
+      Icon: "bulb",
       People: []
     },
     { 
