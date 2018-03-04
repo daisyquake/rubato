@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ApiService } from '../../app/shared/shared';
 
 
 @IonicPage(
@@ -13,28 +14,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
-  interests = [
-    { 
-      Id: 1,
-      Name: "Tennis",
-      People: []
-    },
-    { 
-      Id: 2,
-      Name: "Football",
-      People: []
-    },
-    { 
-      Id: 3,
-      Name: "Basketball",
-      People: []
-    }
-  ];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  myInterests: Array<any>
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, private api: ApiService) {
 
   }
 
-  interestTapped(event, item){
+  ionViewDidEnter() {
+    this.myInterests = this.api.getMyInterests();
+  }
+
+
+  findInterest(){
+    this.navCtrl.push('interests-page');
+  }
+  myInterestTapped(event, item){
       this.navCtrl.push('available-people-page', item);
   }
   swipe(event) {

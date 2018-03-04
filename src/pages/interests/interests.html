@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Select an Interest</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-list>
+          <button ion-item *ngFor="let item of interests" (click)="interestTapped($event, item)">
+            <ion-icon name="flash" padding></ion-icon>
+            {{item.Name}}
+          </button>
+        </ion-list>
+      </ion-card>
+</ion-content>

@@ -8,9 +8,11 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { AvailablePeoplePageModule } from '../pages/available-people/available-people.module';
 import { TabsPage } from '../pages/tabs/tabs';
+import { InterestsPageModule } from '../pages/interests/interests.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ApiService } from  './shared/shared';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     AvailablePeoplePageModule,
+    InterestsPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -36,6 +39,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    ApiService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NativePageTransitions
   ]
