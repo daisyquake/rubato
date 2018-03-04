@@ -241,7 +241,7 @@ var TabsPage = (function () {
         this.nativePageTransitions.slide(options);
     };
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/tabs/tabs.html"*/'<ion-tabs (ionChange)="transition($event)">\n  <ion-tab [root]="tab1Root" tabTitle="Interests" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/tabs/tabs.html"*/'<ion-tabs (ionChange)="transition($event)">\n  <ion-tab [root]="tab1Root" tabTitle="Interests" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Me" tabIcon="contact"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Messages" tabIcon="chatbubbles"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_native_page_transitions__["a" /* NativePageTransitions */]])
     ], TabsPage);
@@ -284,7 +284,7 @@ var AboutPage = (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="main-content" (swipe)="swipe($event)">\n    <h2>About This Example</h2>\n    <p>\n      This is just a little example that might be unuseful for you, sorry if that\'s make you happy.\n    </p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/about/about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Me\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="main-content" (swipe)="swipe($event)">\n    <h2>About This Example</h2>\n    <p>\n     Here will be placed user info.\n    </p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/about/about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], AboutPage);
@@ -324,7 +324,7 @@ var ContactPage = (function () {
     };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="main-content" (swipe)="swipe($event)">\n    <ion-list>\n      <ion-list-header>Follow us on Twitter</ion-list-header>\n      <ion-item (drag)="drag($event)">\n        <ion-icon name="ionic" item-start></ion-icon>\n        @ionicframework\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/contact/contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/home/rada/Projects/rubato/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Messages\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="main-content" (swipe)="swipe($event)">\n    <ion-list>\n      <ion-list-header>Follow us on Twitter</ion-list-header>\n      <ion-item (drag)="drag($event)">\n        <ion-icon name="ionic" item-start></ion-icon>\n        @ionicframework Here will be placed message history.\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/rada/Projects/rubato/src/pages/contact/contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], ContactPage);
