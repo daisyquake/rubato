@@ -1,10 +1,18 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Select an Interest</ion-title>
-  </ion-navbar>
 
-</ion-header>
+      <ion-toolbar>
+        <ion-segment [(ngModel)]="icons" color="secondary">
+          <ion-segment-button value="camera">
+            <ion-icon name="camera"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="bookmark">
+            <ion-icon name="bookmark"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+    </ion-header>
+
 
 
 <ion-content padding>

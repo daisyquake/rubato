@@ -40,7 +40,7 @@ export class TabsPage {
      slidePixels: 0,
      iosdelay: 20,
      androiddelay: 0,
-     fixedPixelsTop: 0,
+     fixedPixelsTop: 48,
      fixedPixelsBottom: 48
     };
 
