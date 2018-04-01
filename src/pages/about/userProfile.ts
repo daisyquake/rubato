@@ -1,6 +1,6 @@
 export class UserProfile{
-    Name = "TestUser"
+    Name = 'TestUser'
     Age = 23;
-    Company = "Samsung"
-    ImageUrl = "assets/img/philColson.png"
+    Company = 'Samsung'
+    ImageUrl = 'assets/imgs/melindaMay.png'
 }

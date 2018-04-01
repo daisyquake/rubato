@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { UserProfile } from './userProfile';
+import {UserItemPage} from '../user-item/user-item';
 
 @Component({
   selector: 'page-about',

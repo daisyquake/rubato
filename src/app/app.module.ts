@@ -4,7 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { MessagesPage } from '../pages/messages/messages';
 import { HomePage } from '../pages/home/home';
 import { AvailablePeoplePageModule } from '../pages/available-people/available-people.module';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -18,14 +18,17 @@ import { MaterialModule } from './mat.module';
 import { SettingsPageModule } from '../pages/settings/settings.module';
 import { EditInfoPage } from '../pages/edit-info/edit-info';
 import { EditInfoPageModule } from '../pages/edit-info/edit-info.module';
+import { UserItemPage } from '../pages/user-item/user-item';
+import { EmojiProvider } from './shared/emoji';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
-    ContactPage,
+    MessagesPage,
     HomePage,
-    TabsPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -35,13 +38,14 @@ import { EditInfoPageModule } from '../pages/edit-info/edit-info.module';
     InterestsPageModule,
     SettingsPageModule,
     EditInfoPageModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AboutPage,
-    ContactPage,
+    MessagesPage,
     HomePage,
     TabsPage
   ],
@@ -50,7 +54,8 @@ import { EditInfoPageModule } from '../pages/edit-info/edit-info.module';
     SplashScreen,
     ApiService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NativePageTransitions
+    NativePageTransitions,
+    EmojiProvider
   ]
 })
 export class AppModule {}

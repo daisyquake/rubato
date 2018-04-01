@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
+import { MessagesPage } from '../messages/messages';
 import { HomePage } from '../home/home';
 
 @Component({
@@ -11,7 +11,7 @@ export class TabsPage {
 
   tab1Root = HomePage;
   tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab3Root = MessagesPage;
   loaded:   boolean = false;
   tabIndex: number  = 0;
 
