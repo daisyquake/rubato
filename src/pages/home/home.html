@@ -1,19 +1,31 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Available Interests</ion-title>
-  </ion-navbar>
+
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="icons" color="secondary">
+      <ion-segment-button value="home">
+        <ion-icon name="home"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="contact">
+        <ion-icon name="contact"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="chatbubbles">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="main-content" (swipe)="swipe($event)">
     <ion-card *ngIf="!myInterests">
-      <ion-card-header class="my-interests-header">No Available Interests</ion-card-header>
+      <ion-card-header class="my-interests-header">No Available Things</ion-card-header>
       <ion-card-content>
         <p>
-          You are currently not having any interests.
+          You are currently not having any things.
         </p>
         <p>
-          First add an interest then you will be able to see available people to connect.
+          First add a thing then you will be able to see available people to connect.
         </p>
         <button ion-button full round (click)="findInterest()">
             <ion-icon name="add-circle" padding></ion-icon> Add an Interest
@@ -22,17 +34,18 @@
     </ion-card>
     <ion-card *ngIf="myInterests">
         <ion-list>
-          <ion-list-header class="my-interests-header">My Interests</ion-list-header>
+          <ion-list-header class="my-interests-header">My Things</ion-list-header>
           <button *ngFor="let item of myInterests;  let i=index" [style.backgroundColor]="i%2 != 0 ? '#eff5f5' : '#d0e1e1'" ion-item (click)="myInterestTapped($event, item)">
             <ion-icon [name]="item.Icon" padding></ion-icon>
             {{item.Name}}
           </button>
         </ion-list>
         <ion-card-content>
-          <button ion-button full round (click)="findInterest()">
-              <ion-icon name="add-circle" padding></ion-icon> Add an Interest
-            </button>
+          <button ion-button round icon-only (click)="findInterest()" style="float:right">
+            <ion-icon name="paper-plane" padding></ion-icon>
+          </button>
         </ion-card-content>
       </ion-card>
+     
   </div>
 </ion-content>
