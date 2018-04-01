@@ -8,9 +8,18 @@
 
 <ion-content padding>
   <div class="main-content" (swipe)="swipe($event)">
-    <h2>About This Example</h2>
-    <p>
-     Here will be placed user info.
-    </p>
+    <ion-row>
+        <!-- <page-user-item [userData]="person"></page-user-item> -->
+          <h4>{{person.Name}}, {{person.Age}}</h4>
+          <h5>{{person.Company}}</h5>
+    </ion-row>
+    <ion-row>
+      <button ion-button (click)="openSettings()">
+          <ion-icon name="settings">Settings</ion-icon>
+      </button>
+      <button ion-button (click)="editInfo()">
+          <ion-icon name="color-wand">Edit Info</ion-icon>
+      </button>
+    </ion-row>
   </div>
 </ion-content>

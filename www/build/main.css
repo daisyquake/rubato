@@ -25708,6 +25708,21 @@ page-home .scroll-content {
   font-size: large;
 }
 
+.option {
+  font-family: SFNSDisplay;
+  font-size: 8px;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  color: #29235e;
+  width: 100% !important;
+  max-width: 100% !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 20px;
+}
+
 .item-profile {
   height: 150px;
 }

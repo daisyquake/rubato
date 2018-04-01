@@ -13,6 +13,11 @@ import { InterestsPageModule } from '../pages/interests/interests.module';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApiService } from  './shared/shared';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './mat.module';
+import { SettingsPageModule } from '../pages/settings/settings.module';
+import { EditInfoPage } from '../pages/edit-info/edit-info';
+import { EditInfoPageModule } from '../pages/edit-info/edit-info.module';
 
 @NgModule({
   declarations: [
@@ -24,8 +29,12 @@ import { ApiService } from  './shared/shared';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     AvailablePeoplePageModule,
     InterestsPageModule,
+    SettingsPageModule,
+    EditInfoPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

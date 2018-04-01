@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<ion-card>
+  <ion-card-header> Discovery Settings</ion-card-header>
+  <ion-card-content>
+      <ion-item>
+          <ion-label>Location</ion-label>
+          <ion-select [(ngModel)]="location.Name">
+              <ion-option *ngFor="let location of locations" [value]="location.Name" class="option" text-wrap>{{location.Name}}</ion-option>
+          </ion-select>
+        </ion-item>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+    <ion-card-header>Maximum Distance {{distance}} km</ion-card-header>
+    <ion-card-content>
+        <ion-range min="0" max="200" [(ngModel)]="distance" color="secondary">
+          </ion-range>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <ion-card-header>Age Range {{ageRange.lower}} - {{ageRange.upper}}</ion-card-header>
+      <ion-card-content>
+          <ion-range min="10" max="100" [(ngModel)]="ageRange" dualKnobs="true" step="3" color="secondary">
+            </ion-range>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header><ion-item> <ion-label>Show me on Rubato</ion-label><ion-toggle [(ngModel)]="showMe"></ion-toggle>
+          </ion-item></ion-card-header>
+      </ion-card>
+      <ion-card>
+          <ion-card-header>App Settings</ion-card-header>
+       
+        <ion-card-content>
+          <ion-item> <ion-label>New Matches</ion-label>  <ion-toggle [(ngModel)]="newMatches"></ion-toggle></ion-item>
+            <ion-item> <ion-label>New Messages</ion-label>N<ion-toggle [(ngModel)]="newMessages"></ion-toggle></ion-item>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
