@@ -8,19 +8,25 @@ export class ApiService {
       Id: 1,
       Name: 'Tennis',
       Icon: 'tennisball',
-      People: []
+      People: [],
+      Total: 100,
+      CurrentlyOnline: 50
     },
     { 
       Id: 2,
       Name: "Football",
       Icon: "football",
-      People: []
+      People: [],
+      Total: 100,
+      CurrentlyOnline: 50
     },
     { 
       Id: 3,
       Name: "Basketball",
       Icon: "basketball",
-      People: []
+      People: [],
+      Total: 100,
+      CurrentlyOnline: 50
     }
   ];
  interests: Array<any> = [
@@ -28,37 +34,49 @@ export class ApiService {
       Id: 1,
       Name: "Tennis",
       Icon: "tennisball",
-      People: []
+      People: [],
+      Total: 100,
+      CurrentlyOnline: 50
     },
     { 
       Id: 2,
       Name: "Football",
       Icon: "football",
-      People: []
+      People: [],
+      Total: 1000,
+      CurrentlyOnline: 150
     },
     { 
       Id: 3,
       Name: "Basketball",
       Icon: "basketball",
-      People: []
+      People: [],
+      Total: 100,
+      CurrentlyOnline: 50
     },
     { 
       Id: 4,
       Name: "Chess",
       Icon: "bulb",
-      People: []
+      People: [],
+      Total: 10,
+      CurrentlyOnline: 5
     },
     { 
       Id: 5,
       Name: "Table tennis",
       Icon: "tennisball",
-      People: []
+      People: [],
+      Total: 150,
+      CurrentlyOnline: 50
     },
     { 
       Id: 6,
       Name: "Bicycling",
       Icon: "bicycle",
-      People: []
+      People: [],
+      Total: 1000,
+      CurrentlyOnline: 10
     }
   ];
 

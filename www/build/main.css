@@ -1,3 +1,10 @@
+.scroll-content {
+  background-color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(cadetblue), to(black));
+  background-image: linear-gradient(cadetblue, black);
+  color: #f7f0d4;
+}
+
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -25855,16 +25862,37 @@ page-chat .message-wrap .message.right .msg-content span.triangle {
   right: -5px;
 }
 
-page-home .scroll-content {
-  background-color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#c2d1f0));
-  background-image: linear-gradient(white, #c2d1f0);
-  color: black;
+page-home button[ion-item] {
+  width: 96%;
+  padding: 1px 2%;
+  margin: 5px;
+  color: #f7f0d4;
+  background-color: black;
+  -webkit-box-shadow: 8px 10px 30px 0px rgba(225, 228, 36, 0.856);
+  box-shadow: 8px 10px 30px 0px rgba(225, 228, 36, 0.856);
+}
+
+page-home .myInterests {
+  background-color: black;
+}
+
+page-home .smallFont {
+  font-size: 10px;
+}
+
+page-home .findInterestIcon {
+  background-color: cadetblue;
+  color: #f7f0d4;
 }
 
 .my-interests-header {
   font-weight: bold;
   font-size: large;
+  background-color: black;
+  color: #f7f0d4;
+  text-align: center;
+  -webkit-box-shadow: 8px 10px 30px 0px rgba(225, 228, 36, 0.856);
+  box-shadow: 8px 10px 30px 0px rgba(225, 228, 36, 0.856);
 }
 
 page-contact .scroll-content {

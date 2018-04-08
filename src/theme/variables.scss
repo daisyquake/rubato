@@ -11,7 +11,12 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 
-
+.scroll-content {
+  background-color: black;
+  background-image: linear-gradient(cadetblue, black);
+  color:  #f7f0d4;
+  }
+  
 @import "ionic.globals";
 
 

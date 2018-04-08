@@ -53,7 +53,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\home\home.html"*/'<ion-header>\n\n\n\n\n\n  <ion-toolbar>\n\n    <ion-segment [(ngModel)]="icons" color="secondary">\n\n      <ion-segment-button value="home">\n\n        <ion-icon name="home"></ion-icon>\n\n      </ion-segment-button>\n\n      <ion-segment-button value="contact">\n\n        <ion-icon name="contact"></ion-icon>\n\n      </ion-segment-button>\n\n      <ion-segment-button value="chatbubbles">\n\n        <ion-icon name="chatbubbles"></ion-icon>\n\n      </ion-segment-button>\n\n    </ion-segment>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="main-content" (swipe)="swipe($event)">\n\n    <ion-card *ngIf="!myInterests">\n\n      <ion-card-header class="my-interests-header">No Available Things</ion-card-header>\n\n      <ion-card-content>\n\n        <p>\n\n          You are currently not having any things.\n\n        </p>\n\n        <p>\n\n          First add a thing then you will be able to see available people to connect.\n\n        </p>\n\n        <button ion-button full round (click)="findInterest()">\n\n            <ion-icon name="add-circle" padding></ion-icon> Add an Interest\n\n          </button>\n\n      </ion-card-content>\n\n    </ion-card>\n\n    <ion-card *ngIf="myInterests">\n\n        <ion-list>\n\n          <ion-list-header class="my-interests-header">My Things</ion-list-header>\n\n          <button *ngFor="let item of myInterests;  let i=index" [style.backgroundColor]="i%2 != 0 ? \'#eff5f5\' : \'#d0e1e1\'" ion-item (click)="myInterestTapped($event, item)">\n\n            <ion-icon [name]="item.Icon" padding></ion-icon>\n\n            {{item.Name}}\n\n          </button>\n\n        </ion-list>\n\n        <ion-card-content>\n\n          <button ion-button round icon-only (click)="findInterest()" style="float:right">\n\n            <ion-icon name="paper-plane" padding></ion-icon>\n\n          </button>\n\n        </ion-card-content>\n\n      </ion-card>\n\n     \n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <ion-segment [(ngModel)]="icons" color="secondary">\n\n      <ion-segment-button value="home">\n\n        <ion-icon name="home"></ion-icon>\n\n      </ion-segment-button>\n\n      <ion-segment-button value="contact">\n\n        <ion-icon name="contact"></ion-icon>\n\n      </ion-segment-button>\n\n      <ion-segment-button value="chatbubbles">\n\n        <ion-icon name="chatbubbles"></ion-icon>\n\n      </ion-segment-button>\n\n    </ion-segment>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="main-content" (swipe)="swipe($event)">\n\n    <ion-card *ngIf="!myInterests">\n\n      <ion-card-header class="my-interests-header">No Available Things</ion-card-header>\n\n      <ion-card-content>\n\n        <p>\n\n          You are currently not having any things.\n\n        </p>\n\n        <p>\n\n          First add a thing then you will be able to see available people to connect.\n\n        </p>\n\n        <button ion-button full round (click)="findInterest()">\n\n            <ion-icon name="add-circle" padding></ion-icon> Add an Interest\n\n          </button>\n\n      </ion-card-content>\n\n    </ion-card>\n\n    <ion-card *ngIf="myInterests" class="myInterests">\n\n        <ion-list>\n\n          <ion-list-header class="my-interests-header">My Things</ion-list-header>\n\n          <button *ngFor="let item of myInterests" ion-item (click)="myInterestTapped($event, item)">\n\n           <div class="row"> \n\n          <div class="col-50"> <ion-icon [name]="item.Icon" padding ></ion-icon> </div>\n\n          <div class="col">\n\n           <div>{{item.Name}}</div>\n\n           <div class="smallFont">People: {{item.Total}}</div>\n\n           <div class="smallFont">Currently available: {{item.CurrentlyOnline}} </div>\n\n          </div>\n\n          </div>\n\n          </button>\n\n        </ion-list>\n\n        <ion-card-content>\n\n          <button ion-button round icon-only (click)="findInterest()" style="float:right">\n\n            <ion-icon name="paper-plane" padding class="findInterestIcon"></ion-icon>\n\n          </button>\n\n        </ion-card-content>\n\n      </ion-card>\n\n     \n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__app_shared_shared__["a" /* ApiService */]])
     ], HomePage);
@@ -331,7 +331,7 @@ var TabsPage = (function () {
             slidePixels: 0,
             iosdelay: 20,
             androiddelay: 0,
-            fixedPixelsTop: 0,
+            fixedPixelsTop: 48,
             fixedPixelsBottom: 48
         };
         if (!this.loaded) {
@@ -778,19 +778,25 @@ var ApiService = (function () {
                 Id: 1,
                 Name: 'Tennis',
                 Icon: 'tennisball',
-                People: []
+                People: [],
+                Total: 100,
+                CurrentlyOnline: 50
             },
             {
                 Id: 2,
                 Name: "Football",
                 Icon: "football",
-                People: []
+                People: [],
+                Total: 100,
+                CurrentlyOnline: 50
             },
             {
                 Id: 3,
                 Name: "Basketball",
                 Icon: "basketball",
-                People: []
+                People: [],
+                Total: 100,
+                CurrentlyOnline: 50
             }
         ];
         this.interests = [
@@ -798,37 +804,49 @@ var ApiService = (function () {
                 Id: 1,
                 Name: "Tennis",
                 Icon: "tennisball",
-                People: []
+                People: [],
+                Total: 100,
+                CurrentlyOnline: 50
             },
             {
                 Id: 2,
                 Name: "Football",
                 Icon: "football",
-                People: []
+                People: [],
+                Total: 1000,
+                CurrentlyOnline: 150
             },
             {
                 Id: 3,
                 Name: "Basketball",
                 Icon: "basketball",
-                People: []
+                People: [],
+                Total: 100,
+                CurrentlyOnline: 50
             },
             {
                 Id: 4,
                 Name: "Chess",
                 Icon: "bulb",
-                People: []
+                People: [],
+                Total: 10,
+                CurrentlyOnline: 5
             },
             {
                 Id: 5,
                 Name: "Table tennis",
                 Icon: "tennisball",
-                People: []
+                People: [],
+                Total: 150,
+                CurrentlyOnline: 50
             },
             {
                 Id: 6,
                 Name: "Bicycling",
                 Icon: "bicycle",
-                People: []
+                People: [],
+                Total: 1000,
+                CurrentlyOnline: 10
             }
         ];
     }
