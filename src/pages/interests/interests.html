@@ -1,25 +1,17 @@
 <ion-header>
-
-
-      <ion-toolbar>
-        <ion-segment [(ngModel)]="icons" color="secondary">
-          <ion-segment-button value="camera">
-            <ion-icon name="camera"></ion-icon>
-          </ion-segment-button>
-          <ion-segment-button value="bookmark">
-            <ion-icon name="bookmark"></ion-icon>
-          </ion-segment-button>
-        </ion-segment>
-      </ion-toolbar>
+  <ion-navbar>
+    <ion-title>Available Things</ion-title>
+  </ion-navbar>
     </ion-header>
-
-
-
 <ion-content padding>
-        <ion-list>
-          <button ion-item *ngFor="let item of interests" (click)="interestTapped($event, item)">
-            <ion-icon [name]="item.Icon" padding></ion-icon>
-            {{item.Name}}
-          </button>
-        </ion-list>
+        <ion-grid>
+          <ion-row *ngFor="let row of grid">
+              <ion-col width-50 *ngFor="let item of row">
+                <button ion-item (click)="interestTapped($event, item)" *ngIf="item">
+                  <ion-icon [name]="item?.Icon" padding></ion-icon>
+                  {{item?.Name}}
+                </button>
+              </ion-col>
+            </ion-row>
+      </ion-grid> 
 </ion-content>

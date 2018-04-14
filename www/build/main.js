@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+webpackJsonp([3],{
 
 /***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -53,7 +53,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <ion-segment [(ngModel)]="icons" color="secondary">\n\n      <ion-segment-button value="home">\n\n        <ion-icon name="home"></ion-icon>\n\n      </ion-segment-button>\n\n      <ion-segment-button value="contact">\n\n        <ion-icon name="contact"></ion-icon>\n\n      </ion-segment-button>\n\n      <ion-segment-button value="chatbubbles">\n\n        <ion-icon name="chatbubbles"></ion-icon>\n\n      </ion-segment-button>\n\n    </ion-segment>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="main-content" (swipe)="swipe($event)">\n\n    <ion-card *ngIf="!myInterests">\n\n      <ion-card-header class="my-interests-header">No Available Things</ion-card-header>\n\n      <ion-card-content>\n\n        <p>\n\n          You are currently not having any things.\n\n        </p>\n\n        <p>\n\n          First add a thing then you will be able to see available people to connect.\n\n        </p>\n\n        <button ion-button full round (click)="findInterest()">\n\n            <ion-icon name="add-circle" padding></ion-icon> Add an Interest\n\n          </button>\n\n      </ion-card-content>\n\n    </ion-card>\n\n    <ion-card *ngIf="myInterests" class="myInterests">\n\n        <ion-list>\n\n          <ion-list-header class="my-interests-header">My Things</ion-list-header>\n\n          <button *ngFor="let item of myInterests" ion-item (click)="myInterestTapped($event, item)">\n\n           <div class="row"> \n\n          <div class="col-50"> <ion-icon [name]="item.Icon" padding ></ion-icon> </div>\n\n          <div class="col">\n\n           <div>{{item.Name}}</div>\n\n           <div class="smallFont">People: {{item.Total}}</div>\n\n           <div class="smallFont">Currently available: {{item.CurrentlyOnline}} </div>\n\n          </div>\n\n          </div>\n\n          </button>\n\n        </ion-list>\n\n        <ion-card-content>\n\n          <button ion-button round icon-only (click)="findInterest()" style="float:right">\n\n            <ion-icon name="paper-plane" padding class="findInterestIcon"></ion-icon>\n\n          </button>\n\n        </ion-card-content>\n\n      </ion-card>\n\n     \n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\home\home.html"*/'<ion-content>\n\n  <div class="main-content" (swipe)="swipe($event)">\n\n    <ion-card *ngIf="!myInterests">\n\n      <ion-card-header class="my-interests-header">No Available Things</ion-card-header>\n\n      <ion-card-content>\n\n        <p>\n\n          You are currently not having any things.\n\n        </p>\n\n        <p>\n\n          First add a thing then you will be able to see available people to connect.\n\n        </p>\n\n        <button ion-button full round (click)="findInterest()">\n\n            <ion-icon name="add-circle" padding></ion-icon> Add an Interest\n\n          </button>\n\n      </ion-card-content>\n\n    </ion-card>\n\n    <ion-card *ngIf="myInterests" class="myInterests">\n\n        <ion-list>\n\n          <ion-list-header class="my-interests-header">My Things</ion-list-header>\n\n          <button *ngFor="let item of myInterests" ion-item (click)="myInterestTapped($event, item)">\n\n           <div class="row"> \n\n          <div class="col-50"> <ion-icon [name]="item.Icon" padding ></ion-icon> </div>\n\n          <div class="col">\n\n           <div>{{item.Name}}</div>\n\n           <div class="smallFont">People: {{item.Total}}</div>\n\n           <div class="smallFont">Currently available: {{item.CurrentlyOnline}} </div>\n\n          </div>\n\n          </div>\n\n          </button>\n\n        </ion-list>\n\n        <ion-card-content>\n\n          <button ion-button round icon-only (click)="findInterest()" style="float:right">\n\n            <ion-icon name="paper-plane" padding class="findInterestIcon"></ion-icon>\n\n          </button>\n\n        </ion-card-content>\n\n      </ion-card>\n\n     \n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__app_shared_shared__["a" /* ApiService */]])
     ], HomePage);
@@ -97,6 +97,10 @@ var map = {
 	],
 	"../pages/home/home.module": [
 		384,
+		2
+	],
+	"../pages/interest-item/interest-item.module": [
+		385,
 		1
 	],
 	"../pages/interests/interests.module": [
@@ -570,6 +574,7 @@ var AppModule = (function () {
                         { loadChildren: '../pages/chat/chat.module#ChatModule', name: 'Chat', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-info/edit-info.module#EditInfoPageModule', name: 'edit-info-page', segment: 'edit-info', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'home-page', segment: 'home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/interest-item/interest-item.module#InterestItemPageModule', name: 'InterestItemPage', segment: 'interest-item', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/interests/interests.module#InterestsPageModule', name: 'interests-page', segment: 'interests', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'settings-page', segment: 'settings', priority: 'low', defaultHistory: [] }
                     ]
@@ -634,12 +639,53 @@ var AvailablePeoplePage = (function () {
                 ImageUrl: 'assets/imgs/melindaMay.png',
                 Raiting: 4,
             },
-            ,
             {
                 Id: 3,
                 FullName: 'Grant Ward',
                 ImageUrl: 'assets/imgs/grantWard.png',
                 Raiting: 3,
+            },
+            {
+                Id: 4,
+                FullName: 'Grant Ward',
+                ImageUrl: 'assets/imgs/grantWard.png',
+                Raiting: 3,
+            },
+            {
+                Id: 5,
+                FullName: 'Grant Ward',
+                ImageUrl: 'assets/imgs/grantWard.png',
+                Raiting: 3,
+            },
+            {
+                Id: 6,
+                FullName: 'Grant Ward',
+                ImageUrl: 'assets/imgs/grantWard.png',
+                Raiting: 3,
+            },
+            {
+                Id: 7,
+                FullName: 'Grant Ward',
+                ImageUrl: 'assets/imgs/grantWard.png',
+                Raiting: 3,
+            },
+            {
+                Id: 8,
+                FullName: 'Grant Ward',
+                ImageUrl: 'assets/imgs/grantWard.png',
+                Raiting: 3,
+            },
+            {
+                Id: 9,
+                FullName: 'Phil Colson',
+                ImageUrl: 'assets/imgs/philColson.png',
+                Raiting: 5,
+            },
+            {
+                Id: 10,
+                FullName: 'Melinda May',
+                ImageUrl: 'assets/imgs/melindaMay.png',
+                Raiting: 4,
             }
         ];
     }
@@ -647,18 +693,38 @@ var AvailablePeoplePage = (function () {
         this.interest = this.navParams.get('Name');
         console.log('ionViewDidLoad AvailablePeoplePage');
         console.log('Interest name: ' + this.interest);
-        this.grid = Array(Math.ceil(this.people.length / 2)); //MATHS!
+        this.grid = new Array();
         this.populateGrid();
+    };
+    AvailablePeoplePage.prototype.getRandomInt = function (min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
     };
     AvailablePeoplePage.prototype.populateGrid = function () {
         var rowNum = 0; //counter to iterate over the rows in the grid
-        for (var i = 0; i < this.people.length; i += 2) {
-            this.grid[rowNum] = Array(2); //declare two elements per row
-            if (this.people[i]) {
-                this.grid[rowNum][0] = this.people[i]; //insert user
+        var copyPeople = Object.assign([], this.people);
+        for (; copyPeople.length > 0;) {
+            var i = 0;
+            var randomConst = this.getRandomInt(0, 3);
+            this.grid[rowNum] = Array(3); //declare two elements per row
+            //  console.log("people " + (randomConst) + "  " + copyPeople[i])
+            if (copyPeople[i]) {
+                this.grid[rowNum][randomConst] = copyPeople[i]; //insert user
+                copyPeople.splice(i, 1);
+                i = i + 1;
             }
-            if (this.people[i + 1]) {
-                this.grid[rowNum][1] = this.people[i + 1];
+            // console.log("people " + (randomConst) + "  " + copyPeople[i])
+            if (copyPeople[i] && randomConst !== 1) {
+                this.grid[rowNum][1] = copyPeople[i];
+                copyPeople.splice(i, 1);
+                i = i + 1;
+            }
+            // console.log("people " + (randomConst) + "  " + copyPeople[i])
+            if (copyPeople[i] && randomConst == 1) {
+                this.grid[rowNum][randomConst + 1] = copyPeople[i];
+                copyPeople.splice(i, 1);
+                i = i + 1;
             }
             rowNum++; //go on to the next row
         }
@@ -896,20 +962,35 @@ var InterestsPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.api = api;
+        this.gridWidth = 3;
+        this.grid = Array(this.gridWidth);
     }
     InterestsPage.prototype.interestTapped = function (event, item) {
         this.api.addMyInterest(item);
         this.navCtrl.pop();
     };
     InterestsPage.prototype.ionViewWillEnter = function () {
-        this.interests = this.api.getInterests();
     };
     InterestsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad InterestsPage');
+        this.interests = this.api.getInterests();
+        this.populateGrid();
+    };
+    InterestsPage.prototype.populateGrid = function () {
+        var rowIndex = 0;
+        for (var i = 0; i < this.interests.length; i += this.gridWidth) {
+            this.grid[rowIndex] = Array(this.gridWidth);
+            for (var columnIndex = 0; columnIndex < this.gridWidth; columnIndex += 1) {
+                if (this.interests[i + columnIndex]) {
+                    this.grid[rowIndex][i + columnIndex] = this.interests[i + columnIndex];
+                }
+            }
+            rowIndex++;
+        }
     };
     InterestsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-interests',template:/*ion-inline-start:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\interests\interests.html"*/'<ion-header>\n\n\n\n\n\n      <ion-toolbar>\n\n        <ion-segment [(ngModel)]="icons" color="secondary">\n\n          <ion-segment-button value="camera">\n\n            <ion-icon name="camera"></ion-icon>\n\n          </ion-segment-button>\n\n          <ion-segment-button value="bookmark">\n\n            <ion-icon name="bookmark"></ion-icon>\n\n          </ion-segment-button>\n\n        </ion-segment>\n\n      </ion-toolbar>\n\n    </ion-header>\n\n\n\n\n\n\n\n<ion-content padding>\n\n        <ion-list>\n\n          <button ion-item *ngFor="let item of interests" (click)="interestTapped($event, item)">\n\n            <ion-icon [name]="item.Icon" padding></ion-icon>\n\n            {{item.Name}}\n\n          </button>\n\n        </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\interests\interests.html"*/,
+            selector: 'page-interests',template:/*ion-inline-start:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\interests\interests.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Available Things</ion-title>\n\n  </ion-navbar>\n\n    </ion-header>\n\n<ion-content padding>\n\n        <ion-grid>\n\n          <ion-row *ngFor="let row of grid">\n\n              <ion-col width-50 *ngFor="let item of row">\n\n                <button ion-item (click)="interestTapped($event, item)" *ngIf="item">\n\n                  <ion-icon [name]="item?.Icon" padding></ion-icon>\n\n                  {{item?.Name}}\n\n                </button>\n\n              </ion-col>\n\n            </ion-row>\n\n      </ion-grid> \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\radmi\OneDrive\Documents\rubato\src\pages\interests\interests.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__app_shared_shared__["a" /* ApiService */]])
     ], InterestsPage);
