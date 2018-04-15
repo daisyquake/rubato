@@ -1,12 +1,23 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>edit-info</ion-title>
-  </ion-navbar>
-
+  <ion-toolbar color="primary">
+    <ion-title>
+      Edit Profile
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-grid>
+  <ion-row>
+    <ion-card>
+      <img src="{{photoUrl}}" />
+    </ion-card>
+  </ion-row>
+  <ion-row>
+  <button ion-item (click)="openImagePicker()">
+  <ion-icon [name]="construct" padding>Change Profile Picture</ion-icon>
+  </button>
+</ion-row>
+</ion-grid>
 </ion-content>
+

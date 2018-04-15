@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 383:
+/***/ 386:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,11 +8,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatModule", function() { return ChatModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_shared_chat_service__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_shared_relative_time__ = __webpack_require__(389);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_emoji_picker_emoji_picker_module__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_shared_emoji__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_shared_chat_service__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_shared_relative_time__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_emoji_picker_emoji_picker_module__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_shared_emoji__ = __webpack_require__(260);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,10 +55,10 @@ var ChatModule = (function () {
 
 /***/ }),
 
-/***/ 386:
+/***/ 389:
 /***/ (function(module, exports, __webpack_require__) {
 
-var isDate = __webpack_require__(393)
+var isDate = __webpack_require__(396)
 
 var MILLISECONDS_IN_HOUR = 3600000
 var MILLISECONDS_IN_MINUTE = 60000
@@ -382,7 +382,7 @@ module.exports = parse
 
 /***/ }),
 
-/***/ 387:
+/***/ 390:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -470,14 +470,14 @@ var ChatService = (function () {
 
 /***/ }),
 
-/***/ 388:
+/***/ 391:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Chat; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_shared_chat_service__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_shared_chat_service__ = __webpack_require__(390);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -643,13 +643,13 @@ var Chat = (function () {
 
 /***/ }),
 
-/***/ 389:
+/***/ 392:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RelativeTime; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_date_fns_distance_in_words_to_now__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_date_fns_distance_in_words_to_now__ = __webpack_require__(393);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_date_fns_distance_in_words_to_now___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_date_fns_distance_in_words_to_now__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -684,10 +684,10 @@ var RelativeTime = (function () {
 
 /***/ }),
 
-/***/ 390:
+/***/ 393:
 /***/ (function(module, exports, __webpack_require__) {
 
-var distanceInWords = __webpack_require__(391)
+var distanceInWords = __webpack_require__(394)
 
 /**
  * @category Common Helpers
@@ -776,14 +776,14 @@ module.exports = distanceInWordsToNow
 
 /***/ }),
 
-/***/ 391:
+/***/ 394:
 /***/ (function(module, exports, __webpack_require__) {
 
-var compareDesc = __webpack_require__(392)
-var parse = __webpack_require__(386)
-var differenceInSeconds = __webpack_require__(394)
-var differenceInMonths = __webpack_require__(396)
-var enLocale = __webpack_require__(399)
+var compareDesc = __webpack_require__(395)
+var parse = __webpack_require__(389)
+var differenceInSeconds = __webpack_require__(397)
+var differenceInMonths = __webpack_require__(399)
+var enLocale = __webpack_require__(402)
 
 var MINUTES_IN_DAY = 1440
 var MINUTES_IN_ALMOST_TWO_DAYS = 2520
@@ -986,10 +986,10 @@ module.exports = distanceInWords
 
 /***/ }),
 
-/***/ 392:
+/***/ 395:
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(386)
+var parse = __webpack_require__(389)
 
 /**
  * @category Common Helpers
@@ -1044,7 +1044,7 @@ module.exports = compareDesc
 
 /***/ }),
 
-/***/ 393:
+/***/ 396:
 /***/ (function(module, exports) {
 
 /**
@@ -1071,10 +1071,10 @@ module.exports = isDate
 
 /***/ }),
 
-/***/ 394:
+/***/ 397:
 /***/ (function(module, exports, __webpack_require__) {
 
-var differenceInMilliseconds = __webpack_require__(395)
+var differenceInMilliseconds = __webpack_require__(398)
 
 /**
  * @category Second Helpers
@@ -1106,10 +1106,10 @@ module.exports = differenceInSeconds
 
 /***/ }),
 
-/***/ 395:
+/***/ 398:
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(386)
+var parse = __webpack_require__(389)
 
 /**
  * @category Millisecond Helpers
@@ -1142,12 +1142,12 @@ module.exports = differenceInMilliseconds
 
 /***/ }),
 
-/***/ 396:
+/***/ 399:
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(386)
-var differenceInCalendarMonths = __webpack_require__(397)
-var compareAsc = __webpack_require__(398)
+var parse = __webpack_require__(389)
+var differenceInCalendarMonths = __webpack_require__(400)
+var compareAsc = __webpack_require__(401)
 
 /**
  * @category Month Helpers
@@ -1187,10 +1187,10 @@ module.exports = differenceInMonths
 
 /***/ }),
 
-/***/ 397:
+/***/ 400:
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(386)
+var parse = __webpack_require__(389)
 
 /**
  * @category Month Helpers
@@ -1226,10 +1226,10 @@ module.exports = differenceInCalendarMonths
 
 /***/ }),
 
-/***/ 398:
+/***/ 401:
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(386)
+var parse = __webpack_require__(389)
 
 /**
  * @category Common Helpers
@@ -1284,11 +1284,11 @@ module.exports = compareAsc
 
 /***/ }),
 
-/***/ 399:
+/***/ 402:
 /***/ (function(module, exports, __webpack_require__) {
 
-var buildDistanceInWordsLocale = __webpack_require__(400)
-var buildFormatLocale = __webpack_require__(401)
+var buildDistanceInWordsLocale = __webpack_require__(403)
+var buildFormatLocale = __webpack_require__(404)
 
 /**
  * @category Locales
@@ -1302,7 +1302,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 400:
+/***/ 403:
 /***/ (function(module, exports) {
 
 function buildDistanceInWordsLocale () {
@@ -1408,10 +1408,10 @@ module.exports = buildDistanceInWordsLocale
 
 /***/ }),
 
-/***/ 401:
+/***/ 404:
 /***/ (function(module, exports, __webpack_require__) {
 
-var buildFormattingTokensRegExp = __webpack_require__(402)
+var buildFormattingTokensRegExp = __webpack_require__(405)
 
 function buildFormatLocale () {
   // Note: in English, the names of days of the week and months are capitalized.
@@ -1503,7 +1503,7 @@ module.exports = buildFormatLocale
 
 /***/ }),
 
-/***/ 402:
+/***/ 405:
 /***/ (function(module, exports) {
 
 var commonFormatterKeys = [
@@ -1538,14 +1538,14 @@ module.exports = buildFormattingTokensRegExp
 
 /***/ }),
 
-/***/ 403:
+/***/ 406:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__emoji_picker__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__emoji_picker__ = __webpack_require__(407);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1578,14 +1578,14 @@ var EmojiPickerComponentModule = (function () {
 
 /***/ }),
 
-/***/ 404:
+/***/ 407:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export EMOJI_PICKER_VALUE_ACCESSOR */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_shared_emoji__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_shared_emoji__ = __webpack_require__(260);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

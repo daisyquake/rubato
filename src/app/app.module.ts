@@ -22,6 +22,9 @@ import { UserItemPage } from '../pages/user-item/user-item';
 import { EmojiProvider } from './shared/emoji';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Crop } from '@ionic-native/crop';
+import { Camera } from '@ionic-native/camera';
 @NgModule({
   declarations: [
     MyApp,
@@ -55,7 +58,10 @@ import { HttpClientModule } from '@angular/common/http';
     ApiService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NativePageTransitions,
-    EmojiProvider
+    EmojiProvider,
+    ImagePicker,
+		Crop,
+		Camera
   ]
 })
 export class AppModule {}

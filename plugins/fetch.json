@@ -6,5 +6,37 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-image-picker": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-image-picker"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.synconset.imagepicker": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-telerik-imagepicker"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-crop": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-crop"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@4.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
